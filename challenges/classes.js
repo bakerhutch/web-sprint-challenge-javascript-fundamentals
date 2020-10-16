@@ -1,6 +1,6 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 
-class CuboidMaker {
+class CuboidMaker1 {
     constructor(lengthArr,widthArr,heightArr) {
         this.length = lengthArr;
         this.width = widthArr;
@@ -13,13 +13,19 @@ class CuboidMaker {
         return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
     }
 }
-class ManipulateCuboid extends CuboidMaker {
+class ManipulateCuboid extends CuboidMaker1 {
     constructor(lengthArr,widthArr,heightArr) {
+        super(lengthArr,widthArr,heightArr);
         this.length = lengthArr + 4;
         this.width = widthArr + 5;
         this.height = heightArr + 5;
     }
 }
+
+// let cuboid = new CuboidMaker1(1,2,3);
+// console.log(cuboid.volume());
+// let cuboid2 = new ManipulateCuboid(1,2,3);
+// console.log(cuboid2.volume());
 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
